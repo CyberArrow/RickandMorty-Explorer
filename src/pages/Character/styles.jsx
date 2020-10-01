@@ -45,6 +45,7 @@ export const HeaderCard = styled.div`
     background-color: #04d361;
     color: aliceblue;
     font-weight: 700;
+    margin-top: 3px;
   }
 
   img {
@@ -57,14 +58,16 @@ export const HeaderCard = styled.div`
 export const ContentCard = styled.div`
   padding: 16px;
   height: 50%;
-  width: 520px;
-  span {
-    line-height: 2.8em;
-    padding: 3px;
-    border-radius: 5px;
-    background-color: #04d361;
-    color: aliceblue;
-    margin-right: 2px;
+  max-width: 520px;
+  div {
+    span {
+      line-height: 2.8em;
+      padding: 3px;
+      border-radius: 5px;
+      background-color: #04d361;
+      color: aliceblue;
+      margin-right: 2px;
+    }
   }
 
   ul {

@@ -32,26 +32,30 @@ function Character() {
                 <span>{character.name}</span>
               </div>
               <img src={character.image} alt="Rick" />
-            </HeaderCard>
-            <ContentCard>
               <span>
                 Origem:
                 {character.origin.name}
               </span>
-              <span>
-                <strong>Espécie:</strong>
-                {character.species}
-              </span>
-              <span>
-                <strong>Gênero:</strong>
-                {character.gender}
-              </span>
-              <span>
-                <strong>Status:</strong>
-                {character.status}
-              </span>
-              <br />
-              <span>Episódios:</span>
+            </HeaderCard>
+            <ContentCard>
+              <div>
+                <span>
+                  <strong>Espécie:</strong>
+                  {character.species}
+                </span>
+                <span>
+                  <strong>Gênero:</strong>
+                  {character.gender}
+                </span>
+                <span>
+                  <strong>Status:</strong>
+                  {character.status}
+                </span>
+                <br />
+                <span>
+                  <strong>Episódios:</strong>
+                </span>
+              </div>
               <br />
               <ul>
                 {character.episode
