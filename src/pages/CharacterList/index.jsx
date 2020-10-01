@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FiChevronLeft } from 'react-icons/fi';
 import api from '../../services/api.jsx';
 
-import { Card, HeaderCard, ContentCard } from './styles.jsx';
+import { Container, Header, Card, HeaderCard, ContentCard } from './styles.jsx';
 
 function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -14,7 +15,13 @@ function CharacterList() {
   }, [characters]);
   return (
     <>
-      <div>
+      <Container>
+        <Header>
+          <Link to="/">
+            <FiChevronLeft size={16} />
+            Voltar
+          </Link>
+        </Header>
         {characters.map(char => (
           <Card key={char.name}>
             <HeaderCard>
@@ -42,7 +49,7 @@ function CharacterList() {
             </ContentCard>
           </Card>
         ))}
-      </div>
+      </Container>
     </>
   );
 }

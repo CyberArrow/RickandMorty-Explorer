@@ -16,6 +16,7 @@ function Landing() {
       <div id="page-landing-content" className="container">
         <div className="logo-container">
           <h2>Rick and Morty Explorer</h2>
+          <h3>Descubra mais sobre os personagens da série</h3>
         </div>
 
         <div className="buttons-container">
@@ -23,8 +24,6 @@ function Landing() {
             Ver personagens
           </Link>
         </div>
-
-        <span className="total-connections">+50 personagens</span>
       </div>
     </div>
   );

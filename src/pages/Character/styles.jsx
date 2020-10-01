@@ -25,11 +25,10 @@ export const Container = styled.div`
 `
 
 export const Card = styled.div`
-  display: flex;
-  align-items: center;
   background-color: aliceblue;
   border: 1px solid #d0d0d0;
   border-radius: 16px;
+  height: 700px;
   max-width: 700px;
   padding: 16px;
   margin-top: 15px;
@@ -39,7 +38,6 @@ export const HeaderCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   span {
     padding: 3px;
     border-radius: 5px;
@@ -49,29 +47,32 @@ export const HeaderCard = styled.div`
 
   img {
     padding-top: 10px;
-    width: 65%;
+    width: 35%;
     border-radius: 50%;
   }
 `
 
 export const ContentCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 12px;
-  justify-content: center;
-
-  p {
-    line-height: 1.8em;
+  padding: 16px;
+  height: 50%;
+  width: 500px;
+  span {
+    line-height: 2.8em;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #04d361;
+    color: aliceblue;
   }
 
-  button {
-    width: 120px;
-    height: 40px;
-    background: #04d361;
-    border-radius: 5px;
-    border: 0;
-    color: #fff;
-    font-weight: bold;
-    transition: background-color 0.2s;
+  ul {
+    display: flex;
+    flex-flow: column wrap;
+    height: inherit;
+    width: inherit;
+    margin:0;
+    list-style: none;
+    li {
+      flex: 0 0 auto;
+    }
   }
 `

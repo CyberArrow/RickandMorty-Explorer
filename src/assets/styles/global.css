@@ -8,10 +8,11 @@
   --color-primary-dark: #774DD6;
   --color-primary-darker: #6842C2;
   --color-secundary: #1b6f20;
-  --color-secundary-dark: #6cac6c;
+  --color-secundary-light: #46c746;
   --color-title-in-primary: #FFFFFF;
   --color-text-in-primary: #D4C2FF;
   --color-text-title: #32264D;
+  --color-text-comment: #24325fff;
   --color-text-complement: #9C98A6;
   --color-text-base: #6A6180;
   --color-line-in-white: #E6E6F0;
@@ -32,7 +33,7 @@ html, body, #root {
 }
 
 body {
-  background: var(--color-background);
+  background: var(--color-primary);
 }
 
 #root {
@@ -43,9 +44,8 @@ body {
 
 body,
 input,
-button,
-textarea {
-  font: 500 1.6rem Poppins;
+button {
+  font: 500 1.6rem Roboto;
   color: var(--color-text-base);
 }
 
