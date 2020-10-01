@@ -125,7 +125,7 @@
 
 @media (max-width: 900px) {
   #page-landing {
-    background-size: 300px 100px;
     background: url('../../assets/img/logo.png') no-repeat 50% top;
+    background-size: 300px 100px;
   }
 }
