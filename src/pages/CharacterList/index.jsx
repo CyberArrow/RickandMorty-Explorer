@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../../services/api.jsx';
+
+import { Card, HeaderCard, ContentCard } from './styles.jsx';
 
 function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -9,16 +12,35 @@ function CharacterList() {
       setCharacters(response.data.results);
     });
   }, [characters]);
-  console.log(characters);
   return (
     <>
       <div>
         {characters.map(char => (
-          <div>
-            <img src={char.image} alt="Pesonagem" />
-            <strong>{char.name}</strong>
-            <p>{char.status}</p>
-          </div>
+          <Card key={char.name}>
+            <HeaderCard>
+              <div>
+                <span>{char.name}</span>
+              </div>
+              <img src={char.image} alt="Rick" />
+            </HeaderCard>
+            <ContentCard>
+              <p>
+                Specie:
+                {char.species}
+              </p>
+              <p>
+                Gender:
+                {char.gender}
+              </p>
+              <p>
+                Status:
+                {char.status}
+              </p>
+              <Link to={`/character/${char.id}`}>
+                <button type="button">Ver mais</button>
+              </Link>
+            </ContentCard>
+          </Card>
         ))}
       </div>
     </>
