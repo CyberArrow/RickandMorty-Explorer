@@ -20,7 +20,7 @@ function Landing() {
         </div>
 
         <div className="buttons-container">
-          <Link to="/characterlist" className="study">
+          <Link to="/characterlist" className="look">
             Ver personagens
           </Link>
         </div>
