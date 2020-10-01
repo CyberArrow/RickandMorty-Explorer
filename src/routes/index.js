@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 
-import Landing from '../pages/Landing'
-import CharacterList from '../pages/CharacterList'
-import CharacterDetail from '../pages/CharacterDetail'
+import Landing from '../pages/Landing/index'
+import CharacterList from '../pages/CharacterList/index'
+import CharacterDetail from '../pages/CharacterDetail/index'
 
 function Routes() {
   return (
