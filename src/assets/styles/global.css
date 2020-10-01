@@ -33,7 +33,7 @@ html, body, #root {
 }
 
 body {
-  background: var(--color-primary);
+  background: var(--color-primary) url('../img/background.png') 75% center;
 }
 
 #root {

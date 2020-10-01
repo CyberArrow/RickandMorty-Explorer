@@ -9,11 +9,12 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #666;
+    color: #53abee;
+    font-weight: 700;
     transition: color 0.2s;
 
     &:hover {
-      color: #666;
+      color: #53abee;
     }
   }
 `
@@ -43,6 +44,7 @@ export const HeaderCard = styled.div`
     border-radius: 5px;
     background-color: #04d361;
     color: aliceblue;
+    font-weight: 700;
   }
 
   img {
@@ -55,13 +57,14 @@ export const HeaderCard = styled.div`
 export const ContentCard = styled.div`
   padding: 16px;
   height: 50%;
-  width: 500px;
+  width: 520px;
   span {
     line-height: 2.8em;
     padding: 3px;
     border-radius: 5px;
     background-color: #04d361;
     color: aliceblue;
+    margin-right: 2px;
   }
 
   ul {
@@ -69,7 +72,7 @@ export const ContentCard = styled.div`
     flex-flow: column wrap;
     height: inherit;
     width: inherit;
-    margin:0;
+    margin: 0;
     list-style: none;
     li {
       flex: 0 0 auto;

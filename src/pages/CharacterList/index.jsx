@@ -10,46 +10,36 @@ function CharacterList() {
 
   useEffect(() => {
     api.get('character').then((response) => {
-      setCharacters(response.data.results);
+      setCharacters(response.data);
     });
   }, [characters]);
   return (
     <>
-      <Container>
-        <Header>
-          <Link to="/">
-            <FiChevronLeft size={16} />
-            Voltar
-          </Link>
-        </Header>
-        {characters.map(char => (
-          <Card key={char.name}>
-            <HeaderCard>
-              <div>
-                <span>{char.name}</span>
-              </div>
-              <img src={char.image} alt="Rick" />
-            </HeaderCard>
-            <ContentCard>
-              <p>
-                Specie:
-                {char.species}
-              </p>
-              <p>
-                Gender:
-                {char.gender}
-              </p>
-              <p>
-                Status:
-                {char.status}
-              </p>
-              <Link to={`/character/${char.id}`}>
-                <button type="button">Ver mais</button>
-              </Link>
-            </ContentCard>
-          </Card>
-        ))}
-      </Container>
+      {characters && characters.results && (
+        <Container>
+          <Header>
+            <Link to="/">
+              <FiChevronLeft size={16} />
+              Voltar
+            </Link>
+          </Header>
+          {characters.results.map(char => (
+            <Card key={char.name}>
+              <HeaderCard>
+                <div>
+                  <span>{char.name}</span>
+                </div>
+                <img src={char.image} alt="Rick" />
+              </HeaderCard>
+              <ContentCard>
+                <Link to={`/character/${char.id}`}>
+                  <button type="button">Ver bio</button>
+                </Link>
+              </ContentCard>
+            </Card>
+          ))}
+        </Container>
+      )}
     </>
   );
 }

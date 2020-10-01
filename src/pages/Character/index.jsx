@@ -3,9 +3,7 @@ import { useRouteMatch, Link } from 'react-router-dom';
 import { FiChevronLeft } from 'react-icons/fi';
 import api from '../../services/api.jsx';
 
-import {
- Container, Header, Card, HeaderCard, ContentCard
-} from './styles.jsx';
+import { Container, Header, Card, HeaderCard, ContentCard } from './styles.jsx';
 
 function Character() {
   const [character, setCharacter] = useState([]);
@@ -14,7 +12,6 @@ function Character() {
 
   useEffect(() => {
     api.get(`character/${params.character}`).then(response => {
-      console.log(response.data);
       setCharacter(response.data);
     });
   }, [params.character]);
@@ -38,11 +35,23 @@ function Character() {
             </HeaderCard>
             <ContentCard>
               <span>
-                Origin:
+                Origem:
                 {character.origin.name}
               </span>
+              <span>
+                <strong>Espécie:</strong>
+                {character.species}
+              </span>
+              <span>
+                <strong>Gênero:</strong>
+                {character.gender}
+              </span>
+              <span>
+                <strong>Status:</strong>
+                {character.status}
+              </span>
               <br />
-              <span>Episodes:</span>
+              <span>Episódios:</span>
               <br />
               <ul>
                 {character.episode
